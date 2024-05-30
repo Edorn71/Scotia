@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_tJgosB5cEe-uy_OQJMU6Gg" name="Test" creationDate="2024-05-30T10:14:58.746+0100" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/TestAD_0.1.item#_T2_bkB5cEe-uy_OQJMU6Gg"/>
+    <taggedValue xmi:id="_tJgosR5cEe-uy_OQJMU6Gg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_tJgosh5cEe-uy_OQJMU6Gg" tag="Author" value="adrianmrutter@cgifrancesas"/>
+    <taggedValue xmi:id="_tJgosx5cEe-uy_OQJMU6Gg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_tJgotB5cEe-uy_OQJMU6Gg" tag="Description" value=""/>
+    <taggedValue xmi:id="_tJgotR5cEe-uy_OQJMU6Gg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_tUYb8R5cEe-uy_OQJMU6Gg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_tUYb8h5cEe-uy_OQJMU6Gg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_tUYb8x5cEe-uy_OQJMU6Gg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_tUZDAB5cEe-uy_OQJMU6Gg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_tJgoth5cEe-uy_OQJMU6Gg">
+      <connection href="../../metadata/connections/TestAD_0.1.item#_9RU2QB5bEe-uy_OQJMU6Gg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/TestAD_0.1.item#_CxiWpB5cEe-uy_OQJMU6Gg"/>
+    </context>
+    <results xmi:id="_tJgotx5cEe-uy_OQJMU6Gg">
+      <resultMetadata xmi:id="_tJgouB5cEe-uy_OQJMU6Gg" executionDate="2024-05-30T10:15:44.709+0100" executionDuration="489" message="For more information please refer to the Error Log view." executionNumber="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_zb07UB5cEe-uy_OQJMU6Gg">
+        <parameters xmi:id="_zb07UR5cEe-uy_OQJMU6Gg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/TestAD_0.1.item#_CxiWpB5cEe-uy_OQJMU6Gg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_z_21cB5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM &quot;ActiveDirectory&quot;.&quot;User_Membership&quot; " language="CData JDBC Driver for Microsoft Active Directory 2023"/>
+        <builtInIndicatorDefinition xmi:id="_z_PKYB5cEe-uy_OQJMU6Gg" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_z_PKYR5cEe-uy_OQJMU6Gg" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_z_PKYh5cEe-uy_OQJMU6Gg" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_z_PKYx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_zb07Uh5cEe-uy_OQJMU6Gg">
+        <parameters xmi:id="_zb07Ux5cEe-uy_OQJMU6Gg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/TestAD_0.1.item#_CxiWpB5cEe-uy_OQJMU6Gg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_z_21cR5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM &quot;ActiveDirectory&quot;.&quot;User_Membership&quot; WHERE &quot;AccountExpires&quot; IS NULL " language="CData JDBC Driver for Microsoft Active Directory 2023"/>
+        <builtInIndicatorDefinition xmi:id="_z_WfIB5cEe-uy_OQJMU6Gg" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_z_WfIR5cEe-uy_OQJMU6Gg" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_z_WfIh5cEe-uy_OQJMU6Gg" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_z_WfIx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_zb07VB5cEe-uy_OQJMU6Gg">
+        <parameters xmi:id="_zb07VR5cEe-uy_OQJMU6Gg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/TestAD_0.1.item#_CxiWpB5cEe-uy_OQJMU6Gg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_z_21ch5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;AccountExpires&quot; FROM &quot;ActiveDirectory&quot;.&quot;User_Membership&quot; ) A" language="CData JDBC Driver for Microsoft Active Directory 2023"/>
+        <builtInIndicatorDefinition xmi:id="_z_ea8B5cEe-uy_OQJMU6Gg" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_z_ea8R5cEe-uy_OQJMU6Gg" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_z_ea8h5cEe-uy_OQJMU6Gg" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_z_ea8x5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_zb07Vh5cEe-uy_OQJMU6Gg">
+        <parameters xmi:id="_zb07Vx5cEe-uy_OQJMU6Gg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/TestAD_0.1.item#_CxiWpB5cEe-uy_OQJMU6Gg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_z_21cx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &quot;AccountExpires&quot;, COUNT(*) FROM &quot;ActiveDirectory&quot;.&quot;User_Membership&quot;  GROUP BY &quot;AccountExpires&quot; HAVING COUNT(*) = 1) AS myquery" language="CData JDBC Driver for Microsoft Active Directory 2023"/>
+        <builtInIndicatorDefinition xmi:id="_z_mWwB5cEe-uy_OQJMU6Gg" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_z_mWwR5cEe-uy_OQJMU6Gg" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_z_mWwh5cEe-uy_OQJMU6Gg" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_z_mWwx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_z_mWxB5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_z_mWxR5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_z_mWxh5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_z_mWxx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_z_mWyB5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_z_mWyR5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_zb07WB5cEe-uy_OQJMU6Gg">
+        <parameters xmi:id="_zb07WR5cEe-uy_OQJMU6Gg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/TestAD_0.1.item#_CxiWpB5cEe-uy_OQJMU6Gg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_z_21dB5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &quot;AccountExpires&quot;, COUNT(*) FROM &quot;ActiveDirectory&quot;.&quot;User_Membership&quot;  m  GROUP BY &quot;AccountExpires&quot; HAVING COUNT(*) > 1) AS myquery" language="CData JDBC Driver for Microsoft Active Directory 2023"/>
+        <builtInIndicatorDefinition xmi:id="_z_uSkB5cEe-uy_OQJMU6Gg" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_z_uSkR5cEe-uy_OQJMU6Gg" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_z_uSkh5cEe-uy_OQJMU6Gg" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_z_uSkx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_z_uSlB5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_z_uSlR5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_z_uSlh5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_z_uSlx5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_z_uSmB5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_z_uSmR5cEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_tJgouR5cEe-uy_OQJMU6Gg" dataFilter="_tUZqEB5cEe-uy_OQJMU6Gg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_tUYb8B5cEe-uy_OQJMU6Gg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_tUZqEB5cEe-uy_OQJMU6Gg" name="Test">
+    <ranges xmi:id="_tUZqER5cEe-uy_OQJMU6Gg">
+      <expressions xmi:id="_tUZqEh5cEe-uy_OQJMU6Gg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_tUZqEx5cEe-uy_OQJMU6Gg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

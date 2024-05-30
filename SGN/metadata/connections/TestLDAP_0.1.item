@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <TalendMetadata:TacokitDatabaseConnection DatabaseType="JDBC" ProductId="JDBC" SID="" dataPackage="_tH5dIB5yEe-Xu_ekRPTwTg" id="_QAbXsB5yEe-Xu_ekRPTwTg" name="TestLDAP" properties="configuration.parameters&#10;&#10;[]&#10;&#10;configuration.port&#10;&#10;80&#10;&#10;configuration.dbMapping&#10;&#10;mysql_id&#10;&#10;configuration.password&#10;&#10;enc:system.encryption.key.v1:gMw1WbeyKC81C25qhlYGWgIQeDJ3W+rcKEKSul9NV65jKoDt0iY4&#10;&#10;configuration.useDataSource&#10;&#10;false&#10;&#10;__TACOKIT_CONFIG_ID&#10;&#10;bmV3amRiYyNKREJDI2RhdGFzdG9yZSNKREJDRGF0YVN0b3Jl&#10;&#10;configuration.jdbcClass&#10;&#10;cdata.jdbc.ldap.LDAPDriver&#10;&#10;configuration.useSharedDBConnection&#10;&#10;false&#10;&#10;configuration.grantType&#10;&#10;CLIENT_CREDENTIALS&#10;&#10;configuration.enableDBType&#10;&#10;false&#10;&#10;configuration.jdbcDriver&#10;&#10;[{configuration.jdbcDriver[].path=mvn:org.talend.libraries/cdata.jdbc.ldap/6.0.0-SNAPSHOT/jar}]&#10;&#10;configuration.authenticationType&#10;&#10;BASIC&#10;&#10;configuration.__version&#10;&#10;-1&#10;&#10;configuration.userId&#10;&#10;rutteram&#10;&#10;configuration.host&#10;&#10;&#10;&#10;configuration.jdbcUrl&#10;&#10;jdbc:ldap:Server=158.234.30.33;User=rutteram;Password=*************;UseSSL=False;BaseDN=Users&#10;&#10;configuration.setRawUrl&#10;&#10;true&#10;&#10;__TACOKIT_CONFIG_PARENT_ID&#10;&#10;bmV3amRiYyNKREJD&#10;&#10;" supplierDependency="_04UsgB5yEe-Xu_ekRPTwTg" supportNLS="false" xmi:id="_QAcl0B5yEe-Xu_ekRPTwTg">
+    <taggedValue tag="Status" value="" xmi:id="_QVS0cB5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="Version" value="0.1" xmi:id="_QVS0cR5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="Purpose" value="" xmi:id="_QVS0ch5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="Description" value="" xmi:id="_QVS0cx5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="Author" value="" xmi:id="_QVS0dB5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="otherParameter" xmi:id="_QVS0dR5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="DB ProductName" value="CData JDBC Driver for LDAP 2023" xmi:id="_tHueAB5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="DB ProductVersion" value="23.0.8839" xmi:id="_tHueAR5yEe-Xu_ekRPTwTg"/>
+    <taggedValue tag="DB IdentifierQuoteString" value="&quot;" xmi:id="_tHueAh5yEe-Xu_ekRPTwTg"/>
+  </TalendMetadata:TacokitDatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog dataManager="_QAcl0B5yEe-Xu_ekRPTwTg" name="CData" xmi:id="_tH5dIB5yEe-Xu_ekRPTwTg">
+    <ownedElement name="LDAP" xmi:id="_tH5dIR5yEe-Xu_ekRPTwTg" xsi:type="orgomg.cwm.resource.relational:Schema">
+      <ownedElement id="_vcwbsB5yEe-Xu_ekRPTwTg" label="Group" name="Group" tableType="TABLE" xmi:id="_vcwbtR5yEe-Xu_ekRPTwTg" xsi:type="relational:TdTable">
+        <taggedValue tag="Comment" value="Stores a list of user names.  Used to apply security principals on resources." xmi:id="_vcwbth5yEe-Xu_ekRPTwTg"/>
+      </ownedElement>
+      <ownedElement id="_vcwbsR5yEe-Xu_ekRPTwTg" label="OrganizationalPerson" name="OrganizationalPerson" tableType="TABLE" xmi:id="_vcwbtx5yEe-Xu_ekRPTwTg" xsi:type="relational:TdTable">
+        <taggedValue tag="Comment" value="This class is used for objects that contain organizational information about a user, such as the employee number, department, manager, title, office address, and so on." xmi:id="_vcwbuB5yEe-Xu_ekRPTwTg"/>
+      </ownedElement>
+      <ownedElement id="_vcwbsh5yEe-Xu_ekRPTwTg" label="Person" name="Person" tableType="TABLE" xmi:id="_vcwbuR5yEe-Xu_ekRPTwTg" xsi:type="relational:TdTable">
+        <taggedValue tag="Comment" value="Contains personal information about a user." xmi:id="_vcwbuh5yEe-Xu_ekRPTwTg"/>
+      </ownedElement>
+      <ownedElement id="_vcwbsx5yEe-Xu_ekRPTwTg" label="Top" name="Top" tableType="TABLE" xmi:id="_vcwbux5yEe-Xu_ekRPTwTg" xsi:type="relational:TdTable">
+        <taggedValue tag="Comment" value="The top level class from which all classes are derived." xmi:id="_vcwbvB5yEe-Xu_ekRPTwTg"/>
+      </ownedElement>
+      <ownedElement id="_vcwbtB5yEe-Xu_ekRPTwTg" label="User" name="User" tableType="TABLE" xmi:id="_vcwbvR5yEe-Xu_ekRPTwTg" xsi:type="relational:TdTable">
+        <taggedValue tag="Comment" value="This class is used to store information about an employee or contractor who works for an organization.  It is also possible to apply this class to long term visitors." xmi:id="_vcwbvh5yEe-Xu_ekRPTwTg"/>
+        <ownedElement feature="_wUbDgB5yEe-Xu_ekRPTwTg" name="CData_LDAP_User_PRIMARYKEY" xmi:id="_wUeG0B5yEe-Xu_ekRPTwTg" xsi:type="orgomg.cwm.resource.relational:PrimaryKey"/>
+        <feature id="Id" key="true" label="Id" length="255" name="Id" nullable="false" sourceType="VARCHAR" talendType="id_String" uniqueKey="_wUeG0B5yEe-Xu_ekRPTwTg" xmi:id="_wUbDgB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Combined index and DN. Multiple indices are only possible when a column is set to SplitDataByRow." xmi:id="_wUbDgR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UsgR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDgh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" numericPrecisionRadix="10" xmi:id="_wUbDgx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="DN" label="DN" length="2000" name="DN" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDhB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The full distinguished name." xmi:id="_wUbDhR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Usjh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDhh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDhx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="RDN" label="RDN" length="2000" name="RDN" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDiB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The relative distinguished name." xmi:id="_wUbDiR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Usmx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDih5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDix5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="BaseDN" label="BaseDN" length="2000" name="BaseDN" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDjB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The base distinguished name." xmi:id="_wUbDjR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UsqB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDjh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDjx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ObjectClass" label="ObjectClass" length="2000" name="ObjectClass" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDkB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The list of classes from which this class is derived." xmi:id="_wUbDkR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UstR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDkh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDkx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="SN" label="SN" length="2000" name="SN" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDlB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute contains the family or last name for a user." xmi:id="_wUbDlR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Uswh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDlh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDlx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="CN" label="CN" length="2000" name="CN" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDmB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The name that represents an object. Used to perform searches." xmi:id="_wUbDmR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Uszx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDmh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDmx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserPassword" label="UserPassword" length="2000" name="UserPassword" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDnB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The user's password in UTF-8 format. This is a write-only attribute." xmi:id="_wUbDnR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Us3B5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDnh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDnx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="TelephoneNumber" label="TelephoneNumber" length="2000" name="TelephoneNumber" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDoB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The primary telephone number." xmi:id="_wUbDoR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Us6R5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDoh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDox5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="SeeAlso" label="SeeAlso" length="2000" name="SeeAlso" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDpB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="List of distinguished names that are related to an object." xmi:id="_wUbDpR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Us9h5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDph5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDpx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="Description" label="Description" length="2000" name="Description" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDqB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains the description to display for an object. This value is restricted as single-valued for backward compatibility in some cases but is allowed to be multi-valued in others. See Remarks." xmi:id="_wUbDqR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtAx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDqh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDqx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="Title" label="Title" length="2000" name="Title" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDrB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains the user's job title. This property is commonly used to indicate the formal job title, such as Senior Programmer, rather than occupational class, such as programmer. It is not typically used for suffix titles such as Esq. or DDS." xmi:id="_wUbDrR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtEB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDrh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDrx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="X121Address" label="X121Address" length="2000" name="X121Address" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDsB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The X.121 address for an object." xmi:id="_wUbDsR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtHR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDsh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDsx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="RegisteredAddress" label="RegisteredAddress" length="2000" name="RegisteredAddress" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDtB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies a mnemonic for an address associated with an object at a particular city location. The mnemonic is registered in the country/region in which the city is located and is used in the provision of the Public Telegram Service." xmi:id="_wUbDtR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtKh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDth5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDtx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="DestinationIndicator" label="DestinationIndicator" length="2000" name="DestinationIndicator" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDuB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This is part of the X.500 specification and  not used by NTDS." xmi:id="_wUbDuR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtNx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDuh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDux5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PreferredDeliveryMethod" label="PreferredDeliveryMethod" length="2000" name="PreferredDeliveryMethod" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDvB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The X.500-preferred way to deliver to addressee." xmi:id="_wUbDvR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtRB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDvh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDvx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="TelexNumber" label="TelexNumber" length="2000" name="TelexNumber" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDwB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="A list of alternate telex numbers." xmi:id="_wUbDwR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtUR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDwh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDwx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="TeletexTerminalIdentifier" label="TeletexTerminalIdentifier" length="2000" name="TeletexTerminalIdentifier" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDxB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies the Teletex terminal identifier and, optionally, parameters, for a teletex terminal associated with an object." xmi:id="_wUbDxR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtXh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDxh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDxx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="InternationalISDNNumber" label="InternationalISDNNumber" length="2000" name="InternationalISDNNumber" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDyB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies an International ISDN Number associated with an object." xmi:id="_wUbDyR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Utax5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDyh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDyx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="FacsimileTelephoneNumber" label="FacsimileTelephoneNumber" length="2000" name="FacsimileTelephoneNumber" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbDzB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains telephone number of the user's business fax machine." xmi:id="_wUbDzR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UteB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbDzh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbDzx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="Street" label="Street" length="2000" name="Street" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD0B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The street address." xmi:id="_wUbD0R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UthR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD0h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD0x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PostOfficeBox" label="PostOfficeBox" length="2000" name="PostOfficeBox" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD1B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The post office box number for this object." xmi:id="_wUbD1R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Utkh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD1h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD1x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PostalCode" label="PostalCode" length="2000" name="PostalCode" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD2B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The postal or zip code for mail delivery." xmi:id="_wUbD2R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04Utnx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD2h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD2x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PostalAddress" label="PostalAddress" length="2000" name="PostalAddress" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD3B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The mailing address for the object." xmi:id="_wUbD3R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtrB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD3h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD3x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PhysicalDeliveryOfficeName" label="PhysicalDeliveryOfficeName" length="2000" name="PhysicalDeliveryOfficeName" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD4B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains the office location in the user's place of business." xmi:id="_wUbD4R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04UtuR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD4h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD4x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="OU" label="OU" length="2000" name="OU" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD5B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The name of the organizational unit." xmi:id="_wUbD5R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VTkB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD5h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD5x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ST" label="ST" length="2000" name="ST" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD6B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The name of a user's state or province." xmi:id="_wUbD6R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VTnR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD6h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD6x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="L" label="L" length="2000" name="L" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD7B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Represents the name of a locality, such as a town or city." xmi:id="_wUbD7R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VTqh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD7h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD7x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserCertificate" label="UserCertificate" length="2000" name="UserCertificate" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD8B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains the DER-encoded X.509v3 certificates issued to the user. Note that this property contains the public key certificates issued to this user by Microsoft Certificate Service." xmi:id="_wUbD8R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VTtx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD8h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD8x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="NetworkAddress" label="NetworkAddress" length="2000" name="NetworkAddress" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD9B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The TCP/IP address for a network segment. Also called the subnet address." xmi:id="_wUbD9R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VTxB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD9h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD9x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserAccountControl" label="UserAccountControl" length="2000" name="UserAccountControl" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD-B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Flags that control the behavior of the user account." xmi:id="_wUbD-R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VT0R5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD-h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD-x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="BadPwdCount" label="BadPwdCount" length="2000" name="BadPwdCount" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbD_B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The number of times the user tried to log on to the account using an incorrect password. A value of 0 indicates that the value is unknown." xmi:id="_wUbD_R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VT3h5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbD_h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbD_x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="CodePage" label="CodePage" length="2000" name="CodePage" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEAB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies the code page for the user's language of choice. This value is not used by Windows 2000." xmi:id="_wUbEAR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VT6x5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEAh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEAx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="HomeDirectory" label="HomeDirectory" length="2000" name="HomeDirectory" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEBB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The home directory for the account. If homeDrive is set and specifies a drive letter, homeDirectory must be a UNC path. Otherwise, homeDirectory is a fully qualified local path including the drive letter (for example, DriveLetter:\Directory\Folder). This value can be a null string." xmi:id="_wUbEBR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VT-B5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEBh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEBx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="HomeDrive" label="HomeDrive" length="2000" name="HomeDrive" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbECB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies the drive letter to which to map the UNC path specified by homeDirectory. The drive letter must be specified in the form DriveLetter: where DriveLetter is the letter of the drive to map. The DriveLetter must be a single, uppercase letter and the colon (:) is required." xmi:id="_wUbECR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUBR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbECh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbECx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="BadPasswordTime" label="BadPasswordTime" length="29" name="BadPasswordTime" pattern="&quot;dd-MM-yyyy&quot;" sourceType="DATETIME" talendType="id_Date" xmi:id="_wUbEDB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The last time and date that an attempt to log on to this account was made with a password that is not valid. This value is stored as a large integer that represents the number of 100-nanosecond INTEGERs since January 1, 1601 (UTC). A value of zero means that the last time a incorrect password was used is unknown." xmi:id="_wUbEDR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Interval" xmi:id="_04VUEB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEDh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEDx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LastLogoff" label="LastLogoff" length="2000" name="LastLogoff" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEEB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute is not used." xmi:id="_wUbEER5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUHR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEEh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEEx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LastLogon" label="LastLogon" length="29" name="LastLogon" pattern="&quot;dd-MM-yyyy&quot;" sourceType="DATETIME" talendType="id_Date" xmi:id="_wUbEFB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The last time the user logged on. This value is stored as a large integer that represents the number of 100-nanosecond INTEGERs since January 1, 1601 (UTC). A value of zero means that the last logon time is unknown." xmi:id="_wUbEFR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Interval" xmi:id="_04VUKB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEFh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEFx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="DBCSPwd" label="DBCSPwd" length="2000" name="DBCSPwd" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEGB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The account's LAN Manager password." xmi:id="_wUbEGR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUNR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEGh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEGx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LocaleID" label="LocaleID" length="2000" name="LocaleID" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEHB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute contains a list of locale IDs supported by this application. A locale ID represents a geographic location, such as a country/region, city, county, and so on." xmi:id="_wUbEHR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUQh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEHh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEHx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ScriptPath" label="ScriptPath" length="2000" name="ScriptPath" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEIB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute specifies the path for the user's logon script. The string can be null." xmi:id="_wUbEIR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUTx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEIh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEIx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LogonHours" label="LogonHours" length="2000" name="LogonHours" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEJB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The hours that the user is allowed to logon to the domain." xmi:id="_wUbEJR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUXB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEJh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEJx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LogonWorkstation" label="LogonWorkstation" length="2000" name="LogonWorkstation" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEKB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute is not used. See the User-Workstations attribute." xmi:id="_wUbEKR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUaR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEKh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEKx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MaxStorage" label="MaxStorage" length="2000" name="MaxStorage" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbELB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The maximum amount of disk space the user can use. Use the value specified in USER_MAXSTORAGE_UNLIMITED to use all available disk space." xmi:id="_wUbELR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUdh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbELh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbELx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserWorkstations" label="UserWorkstations" length="2000" name="UserWorkstations" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEMB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains the NetBIOS or DNS names of the computers running Windows NT Workstation or Windows 2000 Professional from which the user can log on. Each NetBIOS name is separated by a comma. Multiple names should be separated by commas." xmi:id="_wUbEMR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUgx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEMh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEMx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UnicodePwd" label="UnicodePwd" length="2000" name="UnicodePwd" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbENB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The password of the user in Windows NT one-way format (OWF). Windows 2000 uses the Windows NT OWF. This property is used only by the operating system. Note that you cannot derive the clear password back from the OWF form of the password." xmi:id="_wUbENR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUkB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbENh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbENx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="OtherLoginWorkstations" label="OtherLoginWorkstations" length="2000" name="OtherLoginWorkstations" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEOB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Non-Windows NT or LAN Manager workstations from which a user can log on." xmi:id="_wUbEOR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUnR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEOh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEOx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="NtPwdHistory" label="NtPwdHistory" length="2000" name="NtPwdHistory" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEPB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The password history of the user in Windows NT one-way format (OWF). Windows 2000 uses the Windows NT OWF." xmi:id="_wUbEPR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUqh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEPh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEPx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PwdLastSet" label="PwdLastSet" length="29" name="PwdLastSet" pattern="&quot;dd-MM-yyyy&quot;" sourceType="DATETIME" talendType="id_Date" xmi:id="_wUbEQB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The date and time that the password for this account was last changed. This value is stored as a large integer that represents the number of 100 nanosecond INTEGERs since January 1, 1601 (UTC). If this value is set to 0 and the User-Account-Control attribute does not contain the UF_DONT_EXPIRE_PASSWD flag, then the user must set the password at the next logon." xmi:id="_wUbEQR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Interval" xmi:id="_04VUtR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEQh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEQx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PreferredOU" label="PreferredOU" length="2000" name="PreferredOU" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbERB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The Organizational Unit to show by default on user' s desktop." xmi:id="_wUbERR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUwh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbERh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbERx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="PrimaryGroupID" label="PrimaryGroupID" length="2000" name="PrimaryGroupID" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbESB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Contains the relative identifier (RID) for the primary group of the user. By default, this is the RID for the Domain Users group." xmi:id="_wUbESR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VUzx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbESh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbESx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserParameters" label="UserParameters" length="2000" name="UserParameters" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbETB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Parameters of the user. Points to a Unicode string that is set aside for use by applications. This string can be a null string, or it can have any number of characters before the terminating null character. Microsoft products use this member to store user data specific to the individual program." xmi:id="_wUbETR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VU3B5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbETh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbETx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ProfilePath" label="ProfilePath" length="2000" name="ProfilePath" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEUB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies a path to the user's profile. This value can be a null string, a local absolute path, or a UNC path." xmi:id="_wUbEUR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VU6R5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEUh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEUx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="OperatorCount" label="OperatorCount" length="2000" name="OperatorCount" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEVB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Operator count." xmi:id="_wUbEVR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VU9h5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEVh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEVx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="AdminCount" label="AdminCount" length="2000" name="AdminCount" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEWB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Indicates that a given object has had its ACLs changed to a more secure value by the system because it was a member of one of the administrative groups (directly or transitively)." xmi:id="_wUbEWR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVAx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEWh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEWx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="AccountExpires" label="AccountExpires" length="29" name="AccountExpires" pattern="&quot;dd-MM-yyyy&quot;" sourceType="DATETIME" talendType="id_Date" xmi:id="_wUbEXB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The date when the account expires. This value represents the number of 100-nanosecond INTEGERs since January 1, 1601 (UTC). A value of 0 or 0x7FFFFFFFFFFFFFFF (9223372036854775807) indicates that the account never expires." xmi:id="_wUbEXR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Interval" xmi:id="_04VVDh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEXh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEXx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LmPwdHistory" label="LmPwdHistory" length="2000" name="LmPwdHistory" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEYB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The password history of the user in LAN Manager (LM) one-way format (OWF). The LM OWF is used for compatibility with LAN Manager 2.x clients, Windows 95, and Windows 98." xmi:id="_wUbEYR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVGx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEYh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEYx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="GroupMembershipSAM" label="GroupMembershipSAM" length="2000" name="GroupMembershipSAM" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEZB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Windows NT Security. Down level Windows NT support." xmi:id="_wUbEZR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVKB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEZh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEZx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LogonCount" label="LogonCount" length="2000" name="LogonCount" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEaB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The number of times the account has successfully logged on. A value of 0 indicates that the value is unknown." xmi:id="_wUbEaR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVNR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEah5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEax5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ControlAccessRights" label="ControlAccessRights" length="2000" name="ControlAccessRights" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEbB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Used by DS Security to determine which users can perform specific operations on the host object." xmi:id="_wUbEbR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVQh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEbh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEbx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="DefaultClassStore" label="DefaultClassStore" length="2000" name="DefaultClassStore" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEcB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The default Class Store for a given user." xmi:id="_wUbEcR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVTx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEch5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEcx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="GroupsToIgnore" label="GroupsToIgnore" length="2000" name="GroupsToIgnore" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEdB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The Groups-to-Ignore attribute is not currently used." xmi:id="_wUbEdR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVXB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEdh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEdx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="GroupPriority" label="GroupPriority" length="2000" name="GroupPriority" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEeB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The Group-Priority attribute is not currently used." xmi:id="_wUbEeR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04VVaR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEeh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEex5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="DesktopProfile" label="DesktopProfile" length="2000" name="DesktopProfile" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEfB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The location of the desktop profile for a user or group of users. Not used." xmi:id="_wUbEfR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V6pR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEfh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEfx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="DynamicLDAPServer" label="DynamicLDAPServer" length="2000" name="DynamicLDAPServer" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEgB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="DNS name of server handing dynamic properties for this account." xmi:id="_wUbEgR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V6sh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEgh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEgx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserPrincipalName" label="UserPrincipalName" length="2000" name="UserPrincipalName" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEhB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute contains the UPN that is an Internet-style login name for a user based on the Internet standard RFC 822. The UPN is shorter than the distinguished name and easier to remember. By convention, this should map to the user email name.  The value set for this attribute is equal to the length of the user's ID and the domain name.  For more information about this attribute, see User Naming Attributes." xmi:id="_wUbEhR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V6vx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEhh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEhx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="LockoutTime" label="LockoutTime" length="29" name="LockoutTime" pattern="&quot;dd-MM-yyyy&quot;" sourceType="DATETIME" talendType="id_Date" xmi:id="_wUbEiB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The date and time (UTC) that this account was locked out. This value is stored as a large integer that represents the number of 100-nanosecond INTEGERs since January 1, 1601 (UTC). A value of zero means that the account is not currently locked out." xmi:id="_wUbEiR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Interval" xmi:id="_04V6yh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEih5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="TIMESTAMP" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEix5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserSharedFolder" label="UserSharedFolder" length="2000" name="UserSharedFolder" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEjB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies a UNC path to the user's shared documents folder. The path must be a network UNC path of the form \\Server\Share\Directory. This value can be a null string." xmi:id="_wUbEjR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V61x5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEjh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEjx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="UserSharedFolderOther" label="UserSharedFolderOther" length="2000" name="UserSharedFolderOther" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEkB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Specifies a UNC path to the user's additional shared documents folder. The path must be a network UNC path of the form \\Server\Share\Directory. This value can be a null string." xmi:id="_wUbEkR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V65B5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEkh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEkx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ServicePrincipalName" label="ServicePrincipalName" length="2000" name="ServicePrincipalName" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbElB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="List of principal names used for mutual authentication with an instance of a service on this computer." xmi:id="_wUbElR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V68R5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbElh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbElx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="ACSPolicyName" label="ACSPolicyName" length="2000" name="ACSPolicyName" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEmB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="String name of an ACS policy that applies to this user." xmi:id="_wUbEmR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V6_h5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEmh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEmx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="TerminalServer" label="TerminalServer" length="2000" name="TerminalServer" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEnB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Opaque data used by the Windows NT terminal server." xmi:id="_wUbEnR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7Cx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEnh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEnx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MSMQSignCertificates" label="MSMQSignCertificates" length="2000" name="MSMQSignCertificates" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEoB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="This attribute contains a number of certificates. A user can generate a certificate per computer.  For each certificate we also keep a digest." xmi:id="_wUbEoR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7GB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEoh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEox5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MSMQDigests" label="MSMQDigests" length="2000" name="MSMQDigests" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEpB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="An array of digests of the corresponding certificates in attribute mSMQ-Sign-Certificates. They are used for mapping a digest into a certificate." xmi:id="_wUbEpR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7JR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEph5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEpx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MSMQDigestsMig" label="MSMQDigestsMig" length="2000" name="MSMQDigestsMig" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEqB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="In MSMQ mixed-mode, contains the previous value of mSMQDigests." xmi:id="_wUbEqR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7Mh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEqh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEqx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MSMQSignCertificatesMig" label="MSMQSignCertificatesMig" length="2000" name="MSMQSignCertificatesMig" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbErB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="In MSMQ mixed-mode, the attribute contains the previous value of mSMQSignCertificates. MSMQ supports migration from the MSMQ 1.0 DS to the Windows 2000 DS, and mixed mode specifies a state in which some of the DS severs were not upgraded to Windows 2000." xmi:id="_wUbErR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7Px5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbErh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbErx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsNPAllowDialin" label="MsNPAllowDialin" length="2000" name="MsNPAllowDialin" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEsB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="Indicates whether the account has permission to dial in to the RAS server. Do not modify this value directly. Use the appropriate RAS administration function to modify this value." xmi:id="_wUbEsR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7TB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEsh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEsx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsNPCallingStationID" label="MsNPCallingStationID" length="2000" name="MsNPCallingStationID" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEtB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msNPCallingStationID attribute is used internally. Do not modify this value directly." xmi:id="_wUbEtR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7WR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEth5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEtx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsNPSavedCallingStationID" label="MsNPSavedCallingStationID" length="2000" name="MsNPSavedCallingStationID" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEuB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msNPSavedCallingStationID attribute is used internally. Do not modify this value directly." xmi:id="_wUbEuR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7Zh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEuh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEux5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRADIUSCallbackNumber" label="MsRADIUSCallbackNumber" length="2000" name="MsRADIUSCallbackNumber" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEvB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRADIUSCallbackNumber attribute is used internally. Do not modify this value directly." xmi:id="_wUbEvR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7cx5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEvh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEvx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRADIUSFramedIPAddress" label="MsRADIUSFramedIPAddress" length="2000" name="MsRADIUSFramedIPAddress" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEwB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRADIUSFramedIPAddress attribute is used internally. Do not modify this value directly." xmi:id="_wUbEwR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7gB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEwh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEwx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRADIUSFramedRoute" label="MsRADIUSFramedRoute" length="2000" name="MsRADIUSFramedRoute" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbExB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRADIUSFramedRoute attribute is used internally. Do not modify this value directly." xmi:id="_wUbExR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7jR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbExh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbExx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRADIUSServiceType" label="MsRADIUSServiceType" length="2000" name="MsRADIUSServiceType" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEyB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRADIUSServiceType attribute is used internally. Do not modify this value directly." xmi:id="_wUbEyR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7mh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEyh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEyx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRASSavedCallbackNumber" label="MsRASSavedCallbackNumber" length="2000" name="MsRASSavedCallbackNumber" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbEzB5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRASSavedCallbackNumber attribute is used internally. Do not modify this value directly." xmi:id="_wUbEzR5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7px5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbEzh5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbEzx5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRASSavedFramedIPAddress" label="MsRASSavedFramedIPAddress" length="2000" name="MsRASSavedFramedIPAddress" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbE0B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRASSavedFramedIPAddress attribute is used internally. Do not modify this value directly." xmi:id="_wUbE0R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7tB5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbE0h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbE0x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MsRASSavedFramedRoute" label="MsRASSavedFramedRoute" length="2000" name="MsRASSavedFramedRoute" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbE1B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The msRASSavedFramedRoute attribute is used internally. Do not modify this value directly." xmi:id="_wUbE1R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7wR5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbE1h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbE1x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+        <feature id="MS-DS-CreatorSID" label="MS-DS-CreatorSID" length="2000" name="MS-DS-CreatorSID" sourceType="VARCHAR" talendType="id_String" xmi:id="_wUbE2B5yEe-Xu_ekRPTwTg" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="The security ID of the creator of the object that contains this attribute." xmi:id="_wUbE2R5yEe-Xu_ekRPTwTg"/>
+          <taggedValue tag="Content Type" value="Nominal" xmi:id="_04V7zh5yEe-Xu_ekRPTwTg"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_wUbE2h5yEe-Xu_ekRPTwTg" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_wUbE2x5yEe-Xu_ekRPTwTg"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+  <orgomg.cwm.objectmodel.core:Dependency kind="Usage" supplier="_QAcl0B5yEe-Xu_ekRPTwTg" xmi:id="_04UsgB5yEe-Xu_ekRPTwTg">
+    <client href="../../TDQ_Data Profiling/Analyses/TestLDAPColumn_0.1.ana#_0qsgMB5yEe-Xu_ekRPTwTg" xsi:type="dataquality.analysis:Analysis"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_12ab8d7f-a7c7-4072-b515-c55e98626ae0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nOvFtNeZB4XM3MN3Z6pDiEtY5LhjT6BVGr3G3Xla8axcvlOtnK411PPNC45OHDZ5QuDAUxpTb6Vs&#13;
+1yVu4LoUBw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_425bb6c9-855b-4bd4-8594-9d9416bfb22c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8bx9WlLdHig1pakYnG7WXeB6oC/1MUDQMTYlnxTTYiWRJSR1xmFvm1e4qazX6MBY2DKoUP83AtKl&#13;
+T6vFAAqQpQ==</DigestValue></Reference></SignedInfo><SignatureValue>cFbJWj/oTdHAgv/OE7BasoBpXLJ48lOdlZEZ/gSTtUmNM1Yeak3SbhJfTg7tmlOcs8T9FJ//jAUx&#13;
+3eGx/IONcy+YgKt1vmA9w2DmnR3L12DrGnlJM/OpUf+gi9l4YcGCwTLGMogT36g05l7mb1xg1zdM&#13;
+ycKXq04nAnrYyZqrcyE4pf3WeSJJe2dgJev2CP62UvaoBezlIVJyyF0SYnc22r1fGSISRF/LK1M/&#13;
++x6kI4iNrtjG8HXO7jsu7DEwJuw9U7TRiXdBAkvUgrize7IvfRRr7JDmh5F9x0gkQAllsXo/MQA6&#13;
+FrL+CdHqChrkk4MXPnbdle9OfBpzUr2y9aIsKg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_425bb6c9-855b-4bd4-8594-9d9416bfb22c" Target="#_12ab8d7f-a7c7-4072-b515-c55e98626ae0"><Timestamp>2024-05-30 11:57:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

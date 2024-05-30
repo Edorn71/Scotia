@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:softwaredeployment="http://www.talend.org/cwm/foundation/softwaredeployment/2010">
+  <softwaredeployment:TdSoftwareSystem xmi:id="_HXGMYB5cEe-uy_OQJMU6Gg" name="CData JDBC Driver for Microsoft Active Directory 2023" subtype="CData JDBC Driver for Microsoft Active Directory 2023" version="23.0.8839"/>
+  <softwaredeployment:TdSoftwareSystem xmi:id="_zbNOQB5yEe-Xu_ekRPTwTg" name="CData JDBC Driver for LDAP 2023" subtype="CData JDBC Driver for LDAP 2023" version="23.0.8839"/>
+</xmi:XMI>

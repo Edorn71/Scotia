@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_1xKwIB5eEe-uy_OQJMU6Gg" name="TestTable1" creationDate="2024-05-30T10:30:15.585+0100" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/TestAD_0.1.item#_T2_bkB5cEe-uy_OQJMU6Gg"/>
+    <taggedValue xmi:id="_1xKwIR5eEe-uy_OQJMU6Gg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_1xKwIh5eEe-uy_OQJMU6Gg" tag="Author" value="adrianmrutter@cgifrancesas"/>
+    <taggedValue xmi:id="_1xKwIx5eEe-uy_OQJMU6Gg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_1xKwJB5eEe-uy_OQJMU6Gg" tag="Description" value=""/>
+    <taggedValue xmi:id="_1xKwJR5eEe-uy_OQJMU6Gg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_5n5KER5eEe-uy_OQJMU6Gg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_5n5xIB5eEe-uy_OQJMU6Gg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_1xKwJh5eEe-uy_OQJMU6Gg">
+      <connection href="../../metadata/connections/TestAD_0.1.item#_9RU2QB5bEe-uy_OQJMU6Gg"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/TestAD_0.1.item#__ozD8x5bEe-uy_OQJMU6Gg"/>
+    </context>
+    <results xmi:id="_1xKwJx5eEe-uy_OQJMU6Gg">
+      <resultMetadata xmi:id="_1xKwKB5eEe-uy_OQJMU6Gg" executionDate="2024-05-30T10:30:44.811+0100" executionDuration="87" message="Query not executed for indicator: &quot;Row Count&quot; SQL query: SELECT COUNT(*) FROM &quot;CData&quot;.&quot;ActiveDirectory&quot;.&quot;Account&quot;  WHERE (sn=rutter). Exception: Could not find a valid license for using CData JDBC Driver for Microsoft Active Directory 2023 on this system.  To obtain a trial license, please visit www.cdata.com or email sales@cdata.com [code: G nodeid: 1NM8A7W0].If you believe you already have a license, please check the following path(s):/C:/Users/rutteram/TalendWorkspace/Scotia-1037419492/SGN/temp/dbWizard/cdata.jdbc.activedirectory.lic, C:\Users\rutteram\.CData\cdata.jdbc.activedirectory.lic." executionNumber="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_1xKwKR5eEe-uy_OQJMU6Gg">
+        <parameters xmi:id="_2Qw2MB5eEe-uy_OQJMU6Gg"/>
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/TestAD_0.1.item#__ozD8x5bEe-uy_OQJMU6Gg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_6H4RsB5eEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM &quot;CData&quot;.&quot;ActiveDirectory&quot;.&quot;Account&quot;  WHERE (sn=rutter)" language="CData JDBC Driver for Microsoft Active Directory 2023"/>
+        <builtInIndicatorDefinition xmi:id="_6Hvu0B5eEe-uy_OQJMU6Gg" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_6Hvu0R5eEe-uy_OQJMU6Gg" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_6Hvu0h5eEe-uy_OQJMU6Gg" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_6Hvu0x5eEe-uy_OQJMU6Gg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_1xKwKh5eEe-uy_OQJMU6Gg" dataFilter="_5n6YMB5eEe-uy_OQJMU6Gg" analysisType="Table Analysis"/>
+    <contextType xmi:id="_5n5KEB5eEe-uy_OQJMU6Gg" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_5n6YMB5eEe-uy_OQJMU6Gg" name="TestTable1">
+    <ranges xmi:id="_5n6YMR5eEe-uy_OQJMU6Gg">
+      <expressions xmi:id="_5n6YMh5eEe-uy_OQJMU6Gg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_5n6YMx5eEe-uy_OQJMU6Gg" body="sn=rutter" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
